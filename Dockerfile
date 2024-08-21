@@ -2,7 +2,6 @@
 FROM alpine:3.19 as build_image
 WORKDIR /app
 COPY package.json .
-RUN rm -r node_modules
 RUN npm install
 COPY . .
 RUN npm run build
